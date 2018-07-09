@@ -1,0 +1,38 @@
+{
+  "name": "detox",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "ios": "react-native run-ios",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "test:e2e": "detox test",
+    "test:e2e:build":"detox build"
+  },
+  "dependencies": {
+    "react": "16.3.1",
+    "react-native": "0.55.4"
+  },
+  "devDependencies": {
+    "babel-jest": "23.0.1",
+    "babel-preset-react-native": "4.0.0",
+    "detox": "^7.4.3",
+    "jest": "23.1.0",
+    "mocha": "^5.2.0",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/detox.app",
+        "build": "xcodebuild -project ios/detox.xcodeproj -scheme detox -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
+  }
+}
+

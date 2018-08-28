@@ -7,8 +7,7 @@ make sure you have node installed (brew install node, node 8.3.0 and up is requi
 Make sure you have react-native dependencies installed:
 react-native-cli is installed (npm install -g react-native-cli)
 Step 1: Npm install
-Make sure you're in folder saifsms91/detoxAutomationPoc
-Run npm install.
-
-react-native run-ios
-yarn test:e2e
+Step 2: Make sure you're in folder saifsms91/detoxAutomationPoc
+Step 3: Run npm install.
+Step 4: react-native run-ios
+Step 5: yarn test:e2e
